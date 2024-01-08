@@ -1,0 +1,372 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #8294C4; 
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+header {
+    
+    /* padding: 10px 20px; */
+    width: 100%;
+}
+
+.port{
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #072541;
+    
+}
+
+.brand {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.nav-items {
+    display: flex;
+    
+}
+
+.nav-items a {
+    color: #7E1717;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.nav-items a:hover {
+    background-color: #555;
+}
+
+.content {
+    /* Add styling for the rest of your content */
+    padding: 20px;
+}
+.logo{
+    width: 90px;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    
+    
+}
+.logo-text {
+    font-size: 2em; /* Set the font size for the entire text */
+    font-weight: bold;
+    left: 15px;
+    color: #4F709C;
+}
+
+.highlight-letter {
+    font-family: 'Courier New', Courier, monospace;
+    /* font-style: italic; */
+    font-size: 2.5em; /* Set the font size for the highlighted letter 'O' */
+    color: #7FC7D9; /* Set the color for the highlighted letter */
+}
+
+.hero-section {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    padding-bottom: 8rem;
+    background-color: #8294C4; /* Set the background color for the entire hero section */
+}
+
+.faded-text{
+    position: absolute;
+    user-select: none;
+    font-size: 9em;
+    color: #D8D8D8;
+    bottom: -8.8%;
+    left:-4%;
+    font-weight: bold;
+    transition: all 3s;
+
+}
+
+.hero-section-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    
+}
+
+.hero-section-heading{
+    font-size: 35px;
+    color: #343d68;
+    font-weight: 500;
+}
+
+.role{
+    color: #4e45d5;
+    font-weight: 800;
+    
+}
+
+.hero-section-subheading{
+    font-size: 45px;
+    line-height:45px;
+}
+
+.hero-section-description{
+    margin-top: 1rem;
+    width: 70%;
+    font-weight: 500;
+
+} 
+
+
+.btn-pink{
+    width: 150px;
+    background-color: #e84949;
+    padding: 0.8rem 2rem;
+    color: white;
+    font-size: 16px;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-pink::before{
+    content: "";
+    background-color: #1f1f1f;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.8s;
+    z-index: -1;
+}
+
+.btn-pink:hover::before{
+    transform: scaleX(1);
+   
+}
+.btn-pink:hover{
+    border: solid 3px var(--bgOrange);
+    color: black;
+    border: none;
+}
+
+.hero-section-right{
+    position: relative;
+    background-color: #fff; 
+     padding: 0rem; 
+
+}
+
+.absolute{
+    position: absolute;
+}
+
+.user-image {
+    padding: 2.5rem;
+    filter: grayscale(1);
+    transition: all 1s;
+    animation: scaleImage 5s linear infinite;
+    background-color: #fff; 
+    
+}
+
+.user-image img{
+    z-index: -10;
+}
+
+@keyframes scaleImage{
+    0%{
+        filter: grayscale(1);
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+        filter: grayscale(0);
+        box-shadow: 3px 3px 10px black;
+    }
+    100%{
+        transform: scale(1);
+        filter: grayscale(1);
+    }
+}
+
+.skill-container{
+    position: relative;
+    display: flex;
+    padding: 5rem;
+    margin: 3rem auto;
+    gap: 30px;
+}
+
+.skill-container-left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-container-right{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    position: relative;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.skill-fade-text{
+    position: absolute;
+    font-size: 15em;
+    font-style: bold;
+    color: #D8D8D8;
+    bottom: -21%;
+    right: -6%;
+    user-select: none;
+    overflow-y: hidden;
+}
+
+.skills-logo{
+    width: 90px;
+    transition:all 0.5s;
+}
+
+.skills-logo:hover{
+    transform: scale(1.2);
+
+}
+
+.skill-heading{
+    font-size: 50px;
+    font-style: bold;
+    color: #072541;
+    line-height: 50px;
+}
+
+.caps{
+    font-size: 100px;
+}
+
+.skill-subHeading{
+    margin-top:1rem;
+    width: 85%;
+    text-align: justify;
+}
+
+.skill-subHeading p{
+    margin: 15px 0;
+    
+}
+
+.contactus-form-container{
+    width: 100%;
+    background-color: rgb(231,231,231);
+}
+
+.contactus-heading{
+    font-size: 5em;
+    color: #072541;
+    /* padding-top: 2rem; */
+}
+
+.contactus-subheading{
+    font-size: 3rem;
+    color: #343d68aa;
+    text-transform: capitalize;
+}
+
+.contactus-form-container{
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 70%;
+    margin: 2rem 5rem;
+}
+
+.formfield-container{
+    width: 100%;
+}
+
+.formfield{
+    width: 100%;
+    height: 42px;
+    padding: 0 2rem;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px #1f1f1f;
+    font-weight: 500;
+    border: none;
+    margin-top: 27px;
+
+}
+
+.formfield-textarea{
+    height: auto;
+    padding-top:1rem ;
+}
+
+#sybmit-btn{
+    border: none;
+    font-size: 1.4rem;
+    margin: 1rem 0;
+}
+
+#submit-btn:hover{
+    scale: 0.9;
+}
+
+footer{
+    position: relative;
+    margin-top: -1px;
+    background-color: #072541;
+    padding: 5rem;
+}
+
+.footer-wrapper{
+    display: flex;
+    gap: 1rem;
+    padding: 1.2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-faded-text{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #535c87;
+    user-select: none;
+    font-size: 5em;
+    font-weight: bold;
+}
+
+.link-wrapper{
+    display: flex;
+    gap: 1.2rem;
+}
